@@ -1,24 +1,37 @@
-import Image from 'next/image';
-import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaEnvelope, FaPhone } from 'react-icons/fa';
 
 export default function Home() {
   return (
     <main className="flex flex-col min-h-screen">
       {/* Hero Section */}
-      <section className="flex flex-col items-center justify-center min-h-screen px-4 text-center">
-        <div className="max-w-3xl mx-auto">
+      <section className="flex flex-col items-center justify-center min-h-screen px-4 text-center bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800">
+        <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl sm:text-6xl font-bold mb-6">
-            Hi, I'm <span className="text-blue-500">Your Name</span>
+            Hi, I'm <span className="text-blue-500">Thien An Nguyen</span>
           </h1>
-          <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-400 mb-8 font-light">
-            Full Stack Developer passionate about building web applications
+          <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-8 font-light">
+            Computer Science Student at CSU East Bay | Software Developer
           </p>
+          <div className="flex gap-6 justify-center mb-8">
+            <a href="mailto:tnguyen554@horizon.csueastbay.edu" className="text-gray-600 dark:text-gray-300 hover:text-blue-500">
+              <FaEnvelope className="w-6 h-6" />
+            </a>
+            <a href="tel:+16577228927" className="text-gray-600 dark:text-gray-300 hover:text-blue-500">
+              <FaPhone className="w-6 h-6" />
+            </a>
+            <a href="https://github.com/yourusername" className="text-gray-600 dark:text-gray-300 hover:text-blue-500">
+              <FaGithub className="w-6 h-6" />
+            </a>
+            <a href="https://linkedin.com/in/yourusername" className="text-gray-600 dark:text-gray-300 hover:text-blue-500">
+              <FaLinkedin className="w-6 h-6" />
+            </a>
+          </div>
           <div className="flex gap-4 justify-center">
             <a 
               href="#projects" 
               className="px-8 py-3 bg-blue-500 text-white rounded-full hover:bg-blue-600 transition-colors"
             >
-              View My Work
+              View Projects
             </a>
             <a 
               href="#contact" 
@@ -31,65 +44,78 @@ export default function Home() {
       </section>
 
       {/* Projects Section */}
-      <section id="projects" className="py-20 px-4">
+      <section id="projects" className="py-20 px-4 bg-white dark:bg-gray-900">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl font-bold mb-12 text-center">Featured Projects</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Project Card */}
-            <div className="group relative bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all">
-              <div className="relative h-48 bg-gray-100 dark:bg-gray-700">
-                {/* Add project image here */}
-              </div>
-              <div className="p-6">
-                <h3 className="font-bold text-xl mb-2">Project Name</h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  Brief description of the project and the technologies used.
-                </p>
-                <div className="flex gap-4">
-                  <a href="#" className="text-blue-500 hover:text-blue-600 transition-colors">
-                    Live Demo →
-                  </a>
-                  <a href="#" className="text-gray-500 hover:text-gray-600 transition-colors">
-                    Source Code
-                  </a>
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Ferry Simulation Project */}
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 shadow-lg">
+              <h3 className="text-xl font-bold mb-3">Ferry Simulation</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-4">
+                A concurrent system simulation using Python and semaphores for modeling ferry transportation logistics.
+              </p>
+              <div className="flex gap-2">
+                <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-100 rounded-full text-sm">
+                  Python
+                </span>
+                <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-100 rounded-full text-sm">
+                  Semaphores
+                </span>
               </div>
             </div>
-            {/* Add more project cards as needed */}
+
+            {/* Clicker Game Project */}
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 shadow-lg">
+              <h3 className="text-xl font-bold mb-3">Android Clicker Game</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-4">
+                A mobile game developed with Java and Android Studio, featuring Firebase integration.
+              </p>
+              <div className="flex gap-2">
+                <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-100 rounded-full text-sm">
+                  Java
+                </span>
+                <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-100 rounded-full text-sm">
+                  Android
+                </span>
+              </div>
+            </div>
+
+            {/* Task Management Project */}
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 shadow-lg">
+              <h3 className="text-xl font-bold mb-3">Task Manager</h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-4">
+                A GUI-based task management application built with Python and Tkinter.
+              </p>
+              <div className="flex gap-2">
+                <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-100 rounded-full text-sm">
+                  Python
+                </span>
+                <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-100 rounded-full text-sm">
+                  Tkinter
+                </span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Contact Section */}
-      <section id="contact" className="py-20 px-4 bg-gray-50 dark:bg-gray-800/50">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl font-bold mb-8">Get In Touch</h2>
-          <p className="text-gray-600 dark:text-gray-400 mb-8">
-            I'm currently open for opportunities. Feel free to reach out!
-          </p>
-          <div className="flex justify-center gap-6">
-            <a 
-              href="https://github.com/yourusername" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-2xl hover:text-blue-500 transition-colors"
-            >
-              <FaGithub />
-            </a>
-            <a 
-              href="https://linkedin.com/in/yourusername" 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-2xl hover:text-blue-500 transition-colors"
-            >
-              <FaLinkedin />
-            </a>
-            <a 
-              href="mailto:your.email@example.com" 
-              className="text-2xl hover:text-blue-500 transition-colors"
-            >
-              <FaEnvelope />
-            </a>
+      {/* Experience Section */}
+      <section className="py-20 px-4 bg-gray-50 dark:bg-gray-800">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl font-bold mb-12 text-center">Experience</h2>
+          <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg mb-8">
+            <div className="flex justify-between items-start mb-4">
+              <div>
+                <h3 className="text-xl font-bold">Technician</h3>
+                <p className="text-blue-500">Intuitive</p>
+              </div>
+              <p className="text-gray-600 dark:text-gray-400">July 2022 – July 2023</p>
+            </div>
+            <ul className="list-disc list-inside text-gray-600 dark:text-gray-300">
+              <li>Assembled components per Manufacturing Procedure Instructions</li>
+              <li>Conducted functional tests using software</li>
+              <li>Collaborated with software engineers to optimize processes</li>
+            </ul>
           </div>
         </div>
       </section>
