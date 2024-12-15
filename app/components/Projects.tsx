@@ -4,6 +4,24 @@ export default function Projects() {
       <h2 className="text-2xl font-bold mb-4 text-blue-600 dark:text-blue-400">Projects</h2>
       <div className="border-l-4 border-blue-500 pl-4 space-y-8">
         <div>
+          <h3 className="text-xl font-semibold">MY RESUME WEBSITE</h3>
+          <p className="text-gray-500">Next.js, Tailwind CSS • 2024</p>
+          <div className="mt-2 space-y-2">
+            <p>• Developed a professional online resume using Next.js, Tailwind CSS, and responsive design.</p>
+            <p>• Deployed via Vercel for seamless accessibility (<a href="https://my-resume-two-alpha.vercel.app/" className="text-blue-500 hover:underline">https://my-resume-two-alpha.vercel.app/</a>).</p>
+          </div>
+        </div>
+
+        <div>
+          <h3 className="text-xl font-semibold">BIO ABOUT MY SIDE JOB</h3>
+          <p className="text-gray-500">HTML, CSS, JavaScript • 2024</p>
+          <div className="mt-2 space-y-2">
+            <p>• Created a personal webpage showcasing my guitar teaching and performance work.</p>
+            <p>• Built with HTML, CSS, and JavaScript, deployed using GitHub Pages (<a href="https://nta105.github.io/" className="text-blue-500 hover:underline">https://nta105.github.io/</a>).</p>
+          </div>
+        </div>
+
+        <div>
           <h3 className="text-xl font-semibold">FERRY SIMULATION</h3>
           <p className="text-gray-500">Python, Semaphores • Fall 2024</p>
           <div className="mt-2 space-y-2">
