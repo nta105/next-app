@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Navbar from './components/Navbar';
+import Navbar from '@/app/components/Navbar';
 import { ThemeProvider } from './components/ThemeProvider';
 
 const geistSans = Geist({
@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Thien An Nguyen - Portfolio",
+  title: "Resume | Thien An Nguyen",
   description: "Computer Science student portfolio showcasing projects and skills, graduating December 2025",
 };
 
