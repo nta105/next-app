@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Navbar from './components/Navbar';
+import { ThemeProvider } from './components/ThemeProvider';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Your Portfolio",
-  description: "Welcome to my personal portfolio showcasing my work and experience",
+  title: "Thien An Nguyen - Portfolio",
+  description: "Computer Science student portfolio showcasing projects and skills, graduating December 2025",
 };
 
 export default function RootLayout({
@@ -27,12 +28,25 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body 
         suppressHydrationWarning
-        className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100`}
+        className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased bg-gray-50 dark:bg-gray-900 relative`}
       >
-        <Navbar />
-        <main className="pt-16">
-          {children}
-        </main>
+        <div className="fixed inset-0 opacity-20 dark:opacity-10 z-0">
+          <picture>
+            <source srcSet="/background.avif" type="image/avif" />
+            <img 
+              src="/background.avif" 
+              alt=""
+              className="w-full h-full object-cover"
+            />
+          </picture>
+        </div>
+
+        <ThemeProvider>
+          <Navbar />
+          <main className="pt-16 relative z-10">
+            {children}
+          </main>
+        </ThemeProvider>
       </body>
     </html>
   );
