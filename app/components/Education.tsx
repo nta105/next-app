@@ -7,7 +7,7 @@ export default function Education() {
           <h3 className="text-xl font-semibold">California State University, East Bay</h3>
           <p className="text-lg text-gray-600 dark:text-gray-300">Bachelor of Science in Computer Science</p>
           <p className="text-gray-500">Expected Fall 2025 • Hayward, CA</p>
-          <p className="font-semibold mt-2"> GPA: 3.94/4.0 | Dean&#39;s list for the term: Fall 2023, Spring 2024, Fall 2024
+          <p className="font-semibold mt-2"> GPA: 3.94/4.0 | List of Dean for the term: Fall 2023, Spring 2024, Fall 2024
             {/* eslint-disable-line react/no-unescaped-entities */} </p>
 
           <div className="mt-2">
